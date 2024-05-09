@@ -82,9 +82,13 @@ const SimpleTodos = () => {
             Add
           </button>
         </div>
-        <ul className="todos-container">
+       <ul className="todos-container">
           {todoList.map(eachItem => (
-            <TodoItem details={eachItem} onDeleteTodo={onDeleteTodo} />
+            <TodoItem
+              key={eachItem.id}
+              details={eachItem}
+              onDeleteTodo={onDeleteTodo}
+            />
           ))}
         </ul>
       </div>
